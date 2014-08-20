@@ -14,16 +14,17 @@
  * @see <a href="https://projecteuler.net/problem=1">
  *      https://projecteuler.net/problem=1</a>
  */
-public class ProjectEuler01a {
+public class ProjectEuler01c {
 
     /*
-     * This is a basic example. However, it is not generalized or reusable.
-     * You must change the source code to change the maximum value, and there
-     * is no way to reuse this code elsewhere without using copy/paste.
+     * Here, we try to read in the maximum value from the arguments. This
+     * solution is more generalized since we can solve for any maximum value.
+     *
+     * However, we still aren't there yet. What happens if no value or an
+     * invalid value is provided? This example is not robust.
      */
 
-    public static void main(String[] args) {
-        int max = 10;
+    public static int sumMultiples(int max) {
         int sum = 0;
 
         for (int i = 0; i < max; i++) {
@@ -32,6 +33,12 @@ public class ProjectEuler01a {
             }
         }
 
-        System.out.println(sum);
+        return sum;
+    }
+
+
+    public static void main(String[] args) {
+        int max = Integer.parseInt(args[0]);
+        System.out.println(sumMultiples(max));
     }
 }
