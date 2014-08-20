@@ -1,4 +1,3 @@
-lectures
-========
+# CS 212 Lectures
 
-CS 212 Software Development Lectures
+Repository of code demos shown in lecture for CS 212 Software Development.
