@@ -5,67 +5,38 @@ import java.util.TreeMap;
 
 /**
  * This class demonstrates several approaches (some that work, some that
- * don't) to iterating through a nested data structure.
+ * do not) to iterating through a nested data structure.
  *
  * The level of nesting is usually a clue to how many nested loops you
  * will need to iterate through all of the values.
  */
 public class IterationDemo {
+
+    // tree is chosen for consistent output, list is chosen just to
+    // demonstrate a different list implementation
 	private final TreeMap<Integer, LinkedList<String>> results;
 
-	public IterationDemo() 	{
-        results = new TreeMap<Integer, LinkedList<String>>();
-	}
+	// array of words used for demonstration purposes
+	private final String[] words = { "alligator", "ant", "ape", "bat",
+	        "bear", "bision", "cat", "camel", "deer", "dog", "dragonfly",
+	        "hippopotamus" };
 
-	/*
-	 * Simple parsing of strings into words. This is not the focus of
-	 * this code example.
-	 */
-	public void addLine(String line) {
-		for (String word : line.split("\\W")) {
-			word = word.trim();
-			word = word.toLowerCase();
+	public IterationDemo() {
+        // initialize outer data structure
+	    results = new TreeMap<Integer, LinkedList<String>>();
 
-			if (word.isEmpty()) {
-				continue;
-			}
+        // add words to map based on length of word
+	    for (String word : words) {
+	        Integer length = word.length();
 
-			Integer key = word.length();
+	        // make sure the inner data structure is initialized
+	        if (!results.containsKey(length)) {
+	            results.put(length, new LinkedList<>());
+	        }
 
-			/*
-			 * Remember, only the outer data structure is initialized. Once we
-			 * have a new key, we must also initialize the inner data structure.
-			 */
-			if (!results.containsKey(key)) {
-				results.put(key, new LinkedList<String>());
-			}
-
-			/*
-			 * The inner list is a mutable object, so we can modify it directly
-			 * through its reference without having to call put() to update.
-			 */
-			results.get(key).add(word);
-		}
-	}
-
-	/*
-	 * This loads a good example for demonstration purposes.
-	 */
-	public void loadAnimals() {
-		addLine("alligator ant ape");
-		addLine("bat bear bison");
-		addLine("cat camel");
-		addLine("deer dog dragonfly");
-		addLine("hippopotamus");
-
-		/* Expected Output:
-		 *
-		 * 3 = ant ape bat cat dog
-		 * 4 = bear deer
-		 * 5 = bison camel
-		 * 9 = alligator dragonfly
-		 * 12 = hippopotamus
-		 */
+	        // add the word to the appropriate list directly
+	        results.get(length).add(word);
+	    }
 	}
 
 	/*
@@ -288,7 +259,6 @@ public class IterationDemo {
 	 */
 	public static void main(String[] args) {
 		IterationDemo demo = new IterationDemo();
-		demo.loadAnimals();
 
 		demo.forExample();
 		demo.whileExample();
