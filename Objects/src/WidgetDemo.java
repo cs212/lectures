@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /**
  * This demo briefly illustrates some basic terminology for
  * object-oriented programming.
@@ -50,5 +52,14 @@ public class WidgetDemo {
 		// We are unable to modify the name to an invalid value.
 		widget1.setName(null);
 		System.out.println(widget1);
+
+		// We can see all the widget names created so far.
+		System.out.println(Widget.getNames());
+
+		// Notice that we could not access Widget.widgetNames directly.
+		// But, we can get the reference!
+		ArrayList<String> reference = Widget.getNames();
+		reference.clear();
+		System.out.println(Widget.getNames());
 	}
 }

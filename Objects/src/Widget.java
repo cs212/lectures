@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /**
  * This demo briefly illustrates some basic terminology for object-oriented
  * programming.
@@ -29,8 +31,9 @@ public class Widget {
     private String widgetName;
 
     /*
-     * FINAL - For a primitive type, means the value may not change after
-     * initialization. Should initialize at declaration or in constructor.
+     * FINAL MEMBER - Means the member can only be DEFINED once. For a
+     * primitive type, this means it can only be assigned a value once and
+     * is effectively constant.
      */
     private final int widgetID;
 
@@ -42,6 +45,15 @@ public class Widget {
      * provides an implementation (for methods).
      */
     private static int numWidgets = 0;
+
+    /*
+     * STATIC FINAL MEMBER - All instances of this class share this
+     * value. Must initialize at declaration. Since it is FINAL, this is
+     * the only time a reference may be assigned to this member. If the
+     * member is a mutable object, this means the reference cannot be
+     * updated (but the mutable object remains mutable). More later.
+     */
+    private static final ArrayList<String> widgetNames = new ArrayList<>();
 
     /*
      * PUBLIC - Any other class may directly modify this value. It is very
@@ -65,14 +77,19 @@ public class Widget {
         this.widgetName = name;
 
         /*
-         * STATIC (ACCESS) - We access static members through the class
-         * name, to make it clear this changes the value for all instances
-         * of this class.
-         *
          * FINAL - After this initialization, the value of widgetID may not
          * change. (Try it!)
          */
         this.widgetID = ++numWidgets;
+
+        // Attempt redefine modify widgetID or widgetNames at this point!
+
+        /*
+         * STATIC (ACCESS) - We access static members through the class
+         * name, to make it clear this changes the value for all instances
+         * of this class. It is not necessary WITHIN the class, however.
+         */
+        Widget.widgetNames.add(widgetName);
 
         if (debug) {
             System.out.println("Created widget #" + widgetID + " named "
@@ -112,6 +129,15 @@ public class Widget {
      */
     public static int numWidgets() {
         return Widget.numWidgets;
+    }
+
+    /*
+     * UNSAFE GET METHOD - Since widgetNames is mutable, returning the
+     * reference is not safe. While the list reference cannot be modified,
+     * the contents of the list may be modified!
+     */
+    public static ArrayList<String> getNames() {
+        return widgetNames;
     }
 
     /*
