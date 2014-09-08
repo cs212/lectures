@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * This demo briefly illustrates some basic terminology for
@@ -58,8 +58,18 @@ public class WidgetDemo {
 
 		// Notice that we could not access Widget.widgetNames directly.
 		// But, we can get the reference!
-		ArrayList<String> reference = Widget.getNames();
-		reference.clear();
+		List<String> unsafe = Widget.getNamesUnsafe();
+		unsafe.clear();
 		System.out.println(Widget.getNames());
+
+		try {
+        		List<String> safe = Widget.getNames();
+        		safe.clear();
+		}
+		catch (Exception e) {
+		    System.out.println("Unable to modify list.");
+		    System.out.println(Widget.getNames());
+		}
+
 	}
 }

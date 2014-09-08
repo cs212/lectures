@@ -1,4 +1,7 @@
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 
 /**
  * This demo briefly illustrates some basic terminology for object-oriented
@@ -136,8 +139,17 @@ public class Widget {
      * reference is not safe. While the list reference cannot be modified,
      * the contents of the list may be modified!
      */
-    public static ArrayList<String> getNames() {
+    public static List<String> getNamesUnsafe() {
         return widgetNames;
+    }
+
+    /*
+     * SAFE GET METHOD - You can make a copy and return the copy, but that
+     * takes extra time and memory. Instead, return an unmodifiable
+     * version of the list.
+     */
+    public static List<String> getNames() {
+        return Collections.unmodifiableList(widgetNames);
     }
 
     /*
