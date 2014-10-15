@@ -1,4 +1,4 @@
-Inheritance
+Advanced Multithreading
 =================================================
 
 These demos illustrate some more advanced concepts on multithreading, including synchronization, thread pools and work queues, custom locks, and deadlock. 
