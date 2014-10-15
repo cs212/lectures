@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -152,11 +153,11 @@ public class MultithreadedDirectorySizeCalculator {
 
 		@Override
 		public void run() {
-			try {
+		     try (DirectoryStream<Path> stream = Files.newDirectoryStream(directory)) {
 				long files = 0;
 				long bytes = 0;
 
-				for (Path path : Files.newDirectoryStream(directory)) {
+				for (Path path : stream) {
 					if (Files.isDirectory(path)) {
 						// Note that we now create a new runnable object and add it
 						// to the work queue.

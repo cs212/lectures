@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -97,8 +98,8 @@ public class DirectorySizeCalculator {
 
 		logger.debug("Processing {}", directory);
 
-		try {
-			for (Path path : Files.newDirectoryStream(directory)) {
+		try (DirectoryStream<Path> stream = Files.newDirectoryStream(directory)) {
+			for (Path path : stream) {
 				if (Files.isDirectory(path)) {
 					processDirectory(path);
 				}
