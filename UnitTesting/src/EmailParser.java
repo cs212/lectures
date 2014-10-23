@@ -35,9 +35,9 @@ public class EmailParser {
 
 		String regex = null;
 
-		regex = "(.+)@(.+\\.(.+))";
+		// regex = "(.+)@(.+\\.(.+))";
 		// regex = "([^@]*)@([^@]*\\.([^@]*))";
-		// regex = "^([^@]+)@([^@]+\\.([^.@]+))$";
+		regex = "^([^@]+)@([^@]+\\.([^.@]+))$";
 
 		Pattern p = Pattern.compile(regex);
 		Matcher m = p.matcher(email);
@@ -51,7 +51,7 @@ public class EmailParser {
 			return;
 		}
 
-		assert m.groupCount() == 4;
+		assert m.groupCount() == 3 : "Groups: " + m.groupCount();
 
 		valid = true;
 

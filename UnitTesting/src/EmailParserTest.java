@@ -4,6 +4,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
+
 /**
  * Parses an email into its local, domain, and top-level domain components.
  * Does not do full email validation.
