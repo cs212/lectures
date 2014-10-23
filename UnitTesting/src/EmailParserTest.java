@@ -4,16 +4,11 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-
 /**
  * Parses an email into its local, domain, and top-level domain components.
  * Does not do full email validation.
  *
  * Demonstrates regular expressions and unit testing.
- *
- * @author Sophie Engle
- * @author CS 212 Software Development
- * @author University of San Francisco
  *
  * @see EmailParser
  * @see EmailParserTest

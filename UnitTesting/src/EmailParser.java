@@ -3,40 +3,53 @@ import java.util.regex.Pattern;
 
 /**
  * Parses an email into its local, domain, and top-level domain components.
- * Does not do full email validation.
+ * Does not do full email validation!
  *
  * Demonstrates regular expressions and unit testing.
- *
- * @author Sophie Engle
- * @author CS 212 Software Development
- * @author University of San Francisco
  *
  * @see EmailParser
  * @see EmailParserTest
  */
 public class EmailParser {
-	private String email;	// sjengle@cs.usfca.edu
-	private String local;	// sjengle
-	private String domain;	// cs.usfca.edu
-	private String tld;		// edu
+    /** The entire email (null if invalid), like "sjengle@cs.usfca.edu". */
+	private String email;
 
-	private boolean valid;	// Indicates if email was parsable
+	/** The local portion of the email, like "sjengle". **/
+	private String local;
 
+	/** The domain of the email, like "cs.usfca.edu". **/
+	private String domain;
+
+	/**
+	 * The top-level domain of the email, like "edu".
+	 **/
+	private String tld;
+
+	/** Indicates whether the email provided was parsable. **/
+	private boolean valid;
+
+	/**
+	 * Initializes the individual components of an email.
+	 *
+	 * @param email - email address to parse
+	 */
 	public EmailParser(String email) {
 		if (email == null) {
 			return;
 		}
 
-		/*
-		 * Try the following regular expressions, and
-		 * see which ones pass and fail. Make sure you
-		 * understand both the regex, and the unit tests.
-		 */
+        /*
+         * Try the following regular expressions, and see which ones pass and
+         * fail. Make sure you understand both the regex, and the unit tests.
+         *
+         * There may be multiple regular expressions that will pass the provided
+         * tests. Try out your own!
+         */
 
 		String regex = null;
 
-		// regex = "(.+)@(.+\\.(.+))";
-		// regex = "([^@]*)@([^@]*\\.([^@]*))";
+//		regex = "(.+)@(.+\\.(.+))";
+//		regex = "([^@]*)@([^@]*\\.([^@]*))";
 		regex = "^([^@]+)@([^@]+\\.([^.@]+))$";
 
 		Pattern p = Pattern.compile(regex);
@@ -44,6 +57,8 @@ public class EmailParser {
 
 		/*
 		 * Use matches() instead of find() to match against the entire string.
+		 * This assumes we have ONLY the email address, and are not trying
+		 * to find an email address within other text.
 		 */
 
 		if (!m.matches()) {
@@ -66,22 +81,42 @@ public class EmailParser {
 	 * and that is taken care of by the constructor.
 	 */
 
+	/**
+	 * Determines whether the email could be parsed.
+	 * @return true if the email coule be parsed
+	 */
 	public boolean isValid() {
 		return valid;
 	}
 
+	/**
+	 * Returns the local component of an email.
+	 * @return the local component of the email
+	 */
 	public String getLocal() {
 		return local;
 	}
 
+	/**
+	 * Returns the domain component of an email.
+	 * @return the domain component of the email
+	 */
 	public String getDomain() {
 		return domain;
 	}
 
+	/**
+	 * Returns the top-level domain (without period).
+	 * @return the top-level domain of the email
+	 */
 	public String getTLD() {
 		return tld;
 	}
 
+	/**
+	 * Returns the entire email (if it could be parsed).
+	 * @return the email, or null if could not be parsed
+	 */
 	public String getEmail() {
 		return email;
 	}
@@ -91,6 +126,10 @@ public class EmailParser {
 		return getEmail();
 	}
 
+	/**
+	 * Returns all of the email components as parsed by the regular expression.
+	 * @return debug output
+	 */
 	public String debug() {
 		return String.format("Email: %s, Local: %s, Domain: %s, TLD: %s",
 				getEmail(), getLocal(), getDomain(), getTLD());
