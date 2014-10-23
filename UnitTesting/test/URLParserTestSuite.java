@@ -5,10 +5,6 @@ import org.junit.runners.Suite;
  * Part of the {@link URLParser} example. Demonstrates regular expressions,
  * test-driven development, and JUnit test suites.
  *
- * @author Sophie Engle
- * @author CS 212 Software Development
- * @author University of San Francisco
- *
  * @see URLParser
  * @see URLParserTestCase
  * @see URLParserTestSuite

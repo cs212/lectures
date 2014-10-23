@@ -38,11 +38,7 @@ import java.util.regex.Pattern;
 
 /**
  * Attempts to parse a URL into its protocol, domain, resource, query string,
- * and fragment components. However, this class does not validate an email!
- *
- * @author Sophie Engle
- * @author CS 212 Software Development
- * @author University of San Francisco
+ * and fragment components. However, this class does not validate an URL!
  *
  * @see URLParserTestCase
  * @see URLParserTestSuite
@@ -58,6 +54,13 @@ public class URLParser {
 	 * resource:    (/[^?#]*)?					starts with /, does not contain ?#
 	 * query:       (?:\\?([^#]*))?				starts with ?, does not contain #
 	 * fragment:    (?:#(.*))?$					starts with #, everything until end
+	 *
+	 * An example that fails:
+	 * protocol:    ([^:/]+)://
+	 * domain:      ([^/]+)/?
+	 * resource:    ([^?#]+)
+	 * query:       \\?([^#]*)
+	 * fragment:    #(.*)
 	 */
 	private static final String pregex = "^([a-zA-Z][a-zA-Z0-9+.-]*)://";
 	private static final String dregex = "([^/?#]+)";
@@ -68,9 +71,10 @@ public class URLParser {
 	// working regular expression
 	private static final String regex = pregex + dregex + rregex + qregex + fregex;
 
-	// other regular expression attempts that fail
-	// private static final String regex = "([^:/]+)://" + "([^/]+)" + "/?" + "([^?#]+)" + "\\?([^#]*)" + "#(.*)";
-
+	/*
+	 * Since these members are final and immutable, hence constant, they
+	 * are safe to make public.
+	 */
 	public final String url;			// http://docs.python.org/library/string.html?highlight=string#string.digits
 	public final String protocol;	// (req) http
 	public final String domain;		// (req) docs.python.org
@@ -80,6 +84,10 @@ public class URLParser {
 
 	public final boolean valid;
 
+	/**
+	 * Initializes the individual components of the URL.
+	 * @param url - url to parse into components
+	 */
 	public URLParser(String url) {
 		this.url = url;
 
@@ -124,6 +132,9 @@ public class URLParser {
 		return url;
 	}
 
+	/**
+	 * Prints the individual components of the email. Useful for debugging.
+	 */
 	public void print() {
 		String format = "%-8s : %s\n";
 		System.out.printf(format, "url",      url);
