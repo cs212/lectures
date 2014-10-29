@@ -1,0 +1,45 @@
+Pangrams
+
+A pangram is a sentence that uses every letter of the alphabet at least once. You can learn more about pangrams on http://en.wikipedia.org/wiki/Pangram, as well as view a list of pangrams in different languages at http://en.wikipedia.org/wiki/List_of_pangrams.
+
+Example Pangrams
+
+The most famous pangram is:
+
+    The quick brown fox jumps over the lazy dog.
+
+Here are some example pangrams:
+
+    Both fickle dwarves jinx my pig quiz.
+        How quickly daft jumping zebras vex.
+        All questions asked by five watched experts amaze the judge.
+    Every good cow, fox, squirrel, and zebra likes to jump over happy dogs.
+
+Halloween Pangrams
+
+Here are a few more pangrams in the spirit of Halloween:
+
+    Quick fox jumps nightly above wizard.
+    The quick onyx goblin jumps over the lazy dwarf.
+    Painful zombies quickly watch a jinxed graveyard.
+    Grumpy wizards make a toxic brew for the jovial queen.
+
+Pangram Code
+
+You can find code for checking if a sentence is a pangram at http://rosettacode.org/wiki/Pangram_checker. For example, here is some Java code:
+
+    public static boolean isPangram(String test){
+        for (char a = 'A'; a <= 'Z'; a++)
+            if ((test.indexOf(a) < 0) && (test.indexOf((char)(a + 32)) < 0))
+                return false;
+        return true;
+    }
+
+Quick Brown Fox
+
+There are many versions of this pangram with different sizes. For example:
+
+32  Quick brown fox jumps over the lazy dog.
+33  The quick brown fox jumps over a lazy dog.
+35  The quick brown fox jumps over the lazy dog.
+37  The quick brown fox jumped over the lazy dogs.

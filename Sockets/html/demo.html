@@ -1,0 +1,110 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<title>HTML Demo</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+<link href='http://fonts.googleapis.com/css?family=IM+Fell+DW+Pica:400,400italic|IM+Fell+DW+Pica+SC|Inconsolata' rel='stylesheet' type='text/css'>
+
+<style type="text/css">
+    body {
+        font-family: 'IM Fell DW Pica', serif;
+        font-weight: 400;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'IM Fell DW Pica SC', serif;
+        font-weight: 400;
+    }
+
+    code, tt {
+        font-family: 'Inconsolata', monospace;
+    }
+</style>
+
+</head>
+
+<body>
+
+<h1>Pangrams</h1>
+
+<p>A <b>pangram</b> is a sentence that uses <i>every</i> letter of the alphabet at least once. You can learn more about pangrams on <a href="http://en.wikipedia.org/wiki/Pangram">Wikipedia</a>, as well as view a <a href="http://en.wikipedia.org/wiki/List_of_pangrams">list of pangrams</a> in different languages.</p>
+
+<hr align="center" width="80%" size="10" noshade>
+
+<!--
+    Everything between these symbols is a comment.
+//-->
+
+<h2>Example Pangrams</h2>
+
+<p>The most famous pangram is:</p>
+
+<blockquote>
+The quick brown fox jumps over the lazy dog.
+</blockquote>
+
+<p>Here are some example pangrams:</p>
+
+<!-- Try type = "1", "a", "A", "i", "I" //-->
+<ol>
+    <li>Both fickle dwarves jinx my pig quiz.
+        <ol>
+        <li>How quickly daft jumping zebras vex.
+        <li>All questions asked by five watched experts amaze the judge.
+        </ol>
+    <li>Every good cow, fox, squirrel, and zebra likes to jump over happy dogs.
+</ol>
+
+<h3>Halloween Pangrams</h3>
+
+<p>Here are a few more pangrams in the spirit of <font color="orange">Halloween:</font></p>
+
+<!-- Try type = "circle", "square" //-->
+<ul>
+    <li>Quick fox jumps nightly above wizard.
+    <li>The quick onyx goblin jumps over the lazy dwarf.
+    <li>Painful zombies quickly watch a jinxed graveyard.
+    <li>Grumpy wizards make a toxic brew for the jovial queen.
+</ul>
+
+<h2>Pangram Code</h2>
+
+<p>You can find code for checking if a sentence is a pangram at <a href="http://rosettacode.org/wiki/Pangram_checker">Rosetta Code</a>. For example, here is some Java code:</p>
+
+<blockquote><pre><code style="font-size: 12pt; color: #006600;">
+public static boolean isPangram(String test){
+    for (char a = 'A'; a <= 'Z'; a++)
+        if ((test.indexOf(a) < 0) && (test.indexOf((char)(a + 32)) < 0))
+            return false;
+    return true;
+}
+</code></pre></blockquote>
+
+<h2>Quick Brown Fox</h2>
+
+<p>There are many versions of this pangram with different sizes. For example:</p>
+
+<table border="1" cellspacing="0" cellpadding="2">
+<tr>
+    <td>32</td>
+    <td>Quick brown fox jumps over the lazy dog.</td>
+</tr>
+<tr>
+    <td>33</td>
+    <td>The quick brown fox jumps over a lazy dog.</td>
+</tr>
+<tr>
+    <td>35</td>
+    <td>The quick brown fox jumps over the lazy dog.</td>
+</tr>
+<tr>
+    <td>37</td>
+    <td>The quick brown fox jumped over the lazy dogs.</td>
+</tr>
+</table>
+
+</body>
+</html>
