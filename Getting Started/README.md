@@ -5,7 +5,7 @@ This document will help you get started with Java 8 and Eclipse Mars. Both of th
 **Table of Contents**  
 [Installation](#installation)  
 [Eclipse Configuration](#eclipse-configuration)    
-[Github Congfiguration](#git-configuration)  
+[Github Configuration](#git-configuration)  
 [Creating Projects](#creating-projects)
 
 ## Installation
