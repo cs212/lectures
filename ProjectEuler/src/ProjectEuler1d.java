@@ -63,8 +63,7 @@ public class ProjectEuler1d {
 
         if (max < 0) {
             System.out.println("Maximum value must be a positive integer! " +
-                    "Using default value of 10 instead.")
-            ;
+                    "Using default value of 10 instead.");
             max = 10;
         }
 
