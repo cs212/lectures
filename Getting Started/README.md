@@ -2,6 +2,12 @@
 
 This document will help you get started with Java 8 and Eclipse Mars. Both of these are available for most systems, including Mac, Windows, and Linux.
 
+**Table of Contents**  
+[Installation](#installation)  
+[Eclipse Configuration](#eclipse-configuration)    
+[Github Congfiguration](#git-configuration)  
+[Creating Projects](#creating-projects)
+
 ## Installation
 
 ### Install Java JDK
@@ -141,7 +147,7 @@ If you want to create a new project from scratch and add it to your Github repos
 
 4. From the next window, select "Java » Java Project" and click the "Next" button.
 
-5. Give your project a meaningful name. Use CamelCase instead of spaces.
+5. Give your project a meaningful name and follow the remaining prompts.
 
 You will have to commit and push before your project will appear on your remote Github repository.
 
@@ -156,3 +162,15 @@ If you want to add an existing project to your Github repository, follow these s
   *:warning: Make sure the "Use or create repository in parent folder of project" is NOT selected!*
 
 You will have to commit and push before your project will appear on your remote Github repository.
+
+### Development Loop
+
+It is now possible that there are multiple copies of your code at multiple different locations (your personal laptop, the lab computers, on the instructor's computer, and so on). To avoid conflicts, get used to the following workflow:
+
+1. Right-click on the root project folder and select "Team » Pull". If there were changes made, they will show up under the "Fetch" output and will be automatically merged into your current branch.
+
+2. Periodically commit your changes as you work. Every commit creates a local checkpoint allowing you to "undo" your changes. You can do this via the "Git Staging" view pane, or the "Team" menu.
+
+3. Push your changes before closing Eclipse. This will save all of your commits to your remote Github repository, and is a key step to keeping your other clones up to date.
+
+*:warning: Failure to make sure you are working on the latest version of your code will result in conflicts, which can be tricky to resolve!*
