@@ -22,4 +22,12 @@ Any time the instructor updates the code in these repositories, you can perform 
 
 :warning: Only the instructor and TA can `git push` to the above repositories. If you make any changes to the code in these repositories, you will run into issues keeping them up-to-date with the `git pull` command.
 
-I also suggest you keep your private submission repositories in this folder. 
+I also suggest you keep your private submission repositories in this folder. They will be as follows (replace `username` with your myUSF username):
+
+- `cs212-username-homework`: This repository will contain your homework submissions. 
+- `cs212-username-projects`: This repository will contain your project submissions.
+
+You, the TA, and the instructor will have the ability to update the code in those repositories. Before you start working, make sure you perform a `git pull` so that you have the latest version of the code. And, when you are done working, make sure you perform a `git push` so that everyone can see your latest changes.
+
+:warning: If you get out-of-sync with the remote repository, you will cause a conflict. These require manual intervention to resolve, and can cause a huge headache if you are not careful!
+
