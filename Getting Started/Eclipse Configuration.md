@@ -48,7 +48,7 @@ Eclipse is a powerful and customizable IDE that **will** make your life easier i
 
 There are several other options that may be useful, like the "Templates" or "Typing" settings in the "Java » Editor" section, and many more.
 
-### Configure Java Perspective
+## Configure Java Perspective
 
 You can control the layout of each pane in the Java Perspective (the main perspective you'll use). Go to the "Window » Show View" menu to see various options.
 
