@@ -18,6 +18,5 @@ The following classes from the [Java 8 API](http://docs.oracle.com/javase/8/docs
 - [DirectoryStream](http://docs.oracle.com/javase/8/docs/api/java/nio/file/DirectoryStream.html)
 - [BufferedReader](http://docs.oracle.com/javase/8/docs/api/java/io/BufferedReader.html)
 - [BufferedWriter](http://docs.oracle.com/javase/8/docs/api/java/io/BufferedWriter.html)
-
-- [Class `Exception`](http://docs.oracle.com/javase/8/docs/api/java/lang/Exception.html)
-- [Class `RuntimeException`](http://docs.oracle.com/javase/8/docs/api/java/lang/RuntimeException.html)
+- [Exception](http://docs.oracle.com/javase/8/docs/api/java/lang/Exception.html)
+- [RuntimeException](http://docs.oracle.com/javase/8/docs/api/java/lang/RuntimeException.html)
