@@ -18,11 +18,11 @@ The following classes from the [Java 8 API](http://docs.oracle.com/javase/8/docs
 
 ## Relevant Lectures ##
 
-- [Inheritance - Introduction](#)
-- [Inheritance - The Object Class](#)
-- [Inheritance - The Final Keyword](#)
-- [Inheritance - Casting](#)
-- [Inheritance - Abstract Classes and Interfaces](#)
-- [Inheritance - Collections Revisited](#)
-- [Inheritance - Nested Classes](#)
-- [Inheritance - Generics](#)
+- [Inheritance - Introduction](https://drive.google.com/open?id=0BxYofk0iB_upbEhHOTFSODFZcDg)
+- [Inheritance - The Object Class](https://drive.google.com/open?id=0BxYofk0iB_upZ0ZnYm5iT2hjOXc)
+- [Inheritance - The Final Keyword](https://drive.google.com/open?id=0BxYofk0iB_upTXU2b1BQcWRFcjQ)
+- [Inheritance - Casting](https://drive.google.com/open?id=0BxYofk0iB_upempmQWFJd0xFWjg)
+- [Inheritance - Abstract Classes and Interfaces](https://drive.google.com/open?id=0BxYofk0iB_upM0Z4MVZLbXdWb3M)
+- [Inheritance - Collections Revisited](https://drive.google.com/open?id=0BxYofk0iB_upaFM2bUkwSnVoZ1k)
+- [Inheritance - Nested Classes](https://drive.google.com/open?id=0BxYofk0iB_upWFpPd25oYjNjd00)
+- [Inheritance - Generics](https://drive.google.com/open?id=0BxYofk0iB_upS3M1Z0Qxd0NfUWs)
