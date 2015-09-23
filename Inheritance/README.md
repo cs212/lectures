@@ -18,7 +18,7 @@ The following classes from the [Java 8 API](http://docs.oracle.com/javase/8/docs
 
 ## Relevant Lectures ##
 
-- [Inheritance - Introduction](https://drive.google.com/open?id=0BxYofk0iB_upbEhHOTFSODFZcDg)
+- [Inheritance - Introduction](https://drive.google.com/open?id=0BxYofk0iB_upbFlMM2E0bWhwVnc)
 - [Inheritance - The Object Class](https://drive.google.com/open?id=0BxYofk0iB_upZ0ZnYm5iT2hjOXc)
 - [Inheritance - The Final Keyword](https://drive.google.com/open?id=0BxYofk0iB_upTXU2b1BQcWRFcjQ)
 - [Inheritance - Casting](https://drive.google.com/open?id=0BxYofk0iB_upempmQWFJd0xFWjg)
