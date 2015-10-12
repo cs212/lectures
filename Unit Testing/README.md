@@ -16,6 +16,6 @@ The following websites may be useful:
 The following lectures may be useful:
 
 - [Software Testing - Motivation](https://drive.google.com/open?id=0BxYofk0iB_upN09pQTBXbmxveGM)
-- [Software Testing - Basics)(https://drive.google.com/open?id=0BxYofk0iB_upQnNKQnRBU1dlbk0)
-- [Software Testing - Unit Testing)(https://drive.google.com/open?id=0BxYofk0iB_upNlZlU1FVTzYtWnc)
+- [Software Testing - Basics](https://drive.google.com/open?id=0BxYofk0iB_upQnNKQnRBU1dlbk0)
+- [Software Testing - Unit Testing](https://drive.google.com/open?id=0BxYofk0iB_upNlZlU1FVTzYtWnc)
 
