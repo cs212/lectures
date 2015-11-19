@@ -44,8 +44,8 @@ public class MessageServlet extends HttpServlet {
 		log.info("MessageServlet ID " + this.hashCode() + " handling GET request.");
 
 		PrintWriter out = response.getWriter();
-		out.printf("<html>%n");
-		out.printf("<head><title>%s</title></head>%n", TITLE);
+		out.printf("<html>%n%n");
+        out.printf("<head><title>%s</title></head>%n", TITLE);
 		out.printf("<body>%n");
 
 		out.printf("<h1>Message Board</h1>%n%n");
@@ -61,7 +61,7 @@ public class MessageServlet extends HttpServlet {
 		out.printf("<p>This request was handled by thread %s.</p>%n",
 				Thread.currentThread().getName());
 
-		out.printf("</body>%n");
+		out.printf("%n</body>%n");
 		out.printf("</html>%n");
 
 		response.setStatus(HttpServletResponse.SC_OK);
@@ -94,10 +94,11 @@ public class MessageServlet extends HttpServlet {
 				message, username, getDate());
 
 		synchronized (messages) {
-			messages.push(formatted);
+			messages.addLast(formatted);
 
-			if (messages.size() > 20) {
-				messages.pop();
+			while (messages.size() > 2) {
+			    String first = messages.removeFirst();
+				log.info("Removing message: " + first);
 			}
 		}
 
