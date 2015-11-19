@@ -18,4 +18,4 @@ Replace each `x` with the latest stable version numbers. For help with embedded 
 
 I also recommend you consider the [Apache Commons Lang](https://commons.apache.org/proper/commons-lang/) library, which has several useful utilities. 
 
-- [`commons-lang3-v.v.jar](http://commons.apache.org/lang/download_lang.cgi)
+- [`commons-lang3-v.v.jar`](http://commons.apache.org/lang/download_lang.cgi)
