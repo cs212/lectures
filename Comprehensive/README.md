@@ -28,3 +28,9 @@ where `username` is your CS username. You will be prompted for your CS password.
 If you are a Mac user, you can create a `tunnel.command` file with the SSH command you should use and give the file execute privileges. Then, you should be able to double-click the file to run the command.
 
 If you are a Windows user, you need to setup the tunnel (or port forwarding) using a program like Putty. (Search for "Putty Port Forwarding" to find several guides.)
+
+## Security Notes
+
+Nothing we do regarding security will be effective unless we use encrypted communication between the client browser and the web server. For this, you should be using HTTPS instead of HTTP. 
+
+Unless you are a security expert, I always recommend you use a package designed by security professionals for handling sensitive information (like username and passwords). However, there are some best practices guides out there. See the [OWASP](https://www.owasp.org/index.php/About_OWASP) [Password Storage Cheat Sheet](https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet) for an example. 
